@@ -1,10 +1,10 @@
 # Lab-sonarqube
 
-1. Lo primero que hicimos fue montar el dokcer.compose.yml
-
+## 1. Lo primero que hicimos fue montar el dokcer.compose.yml
+```
 docker-compose up -d
-
-2. Instalar el CLI de SonarQube
+```
+## 2. Instalar el CLI de SonarQube
 
 [Descarga](https://docs.sonarsource.com/sonarqube/10.4/analyzing-source-code/scanners/sonarscanner/)
 
@@ -21,19 +21,34 @@ Agrega la ruta a la carpeta bin de SonarScanner (por ejemplo, C:\SonarScanner\bi
 Haz clic en "Aceptar" para guardar los cambios.
 
 Verificar la instalacion
-
+```
 sonar-scanner --version
-
-3. Iniciar sesion con el usuario por defecto
+```
+## 3. Iniciar sesion con el usuario por defecto
 
 * User: admin
 * Password: admin
 
-4. Configurar SonarQube
+## 4. Configurar SonarQube
 
-5. Correr el comando que te arroja Sonar, en este caso fue
+![](/imgs/part1local.PNG)
 
+![](/imgs/part2.PNG)
+
+## 5. Correr el comando que te arroja Sonar, en este caso fue
+
+```
 sonar-scanner.bat -D"sonar.projectKey=books_manager" -D"sonar.sources=." -D"sonar.host.url=https://jubilant-acorn-gpjqppgqjgg3w769-9000.app.github.dev" -D"sonar.token=sqp_d0fa137eb571bd0b04e0d904635b3e8ffd27f2fd"
+```
+## 6. Revisar los logs
 
-6. Revisar los logs
+![](/imgs/logs.PNG)
+
+Se crean estos archivos.
+
+![](/imgs/files.PNG)
+
+Tablero del projecto
+
+![](/imgs/LogsCalDone.PNG)
 
